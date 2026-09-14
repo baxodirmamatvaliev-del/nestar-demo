@@ -1,18 +1,17 @@
+
 import { useEffect, useState } from "react";
 
-const useDeviceDetect = () => {
-  const [device, setDevice] = useState("");
+const useDeviceDetect = (): string => {
+  const [device, setDevice] = useState<string>("desktop");
 
   useEffect(() => {
-    const detectDevice = () => {
-      setDevice(window.innerWidth <= 768 ? "mobile" : "desktop");
-    };
-
-    detectDevice();
-    window.addEventListener("resize", detectDevice);
-
-    return () => window.removeEventListener("resize", detectDevice);
-  }, []);
+    const userAgent = navigator.userAgent;
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        userAgent
+      );
+    setDevice(isMobile ? "mobile" : "desktop");
+  }, [device]);
 
   return device;
 };
