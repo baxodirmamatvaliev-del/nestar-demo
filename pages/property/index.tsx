@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { NextPage } from "next";
 import { Box, Button, Pagination, Stack, Typography } from "@mui/material";
-// import PropertyCard from "../../libs/components/property/PropertyCard";
+import PropertyCard from "../../libs/components/property/PropertyCard";
 import withLayoutBasic from "../../libs/components/layout/LayoutBassic";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
-// import Filter from "@/libs/components/property/Filter";
+import Filter from "@/libs/components/property/Filter";
 import useDeviceDetect from "@/libs/hooks/useDeviceDetect";
 
 const PropertyList: NextPage = () => {
@@ -25,13 +25,13 @@ const PropertyList: NextPage = () => {
           </Box>
           <Stack className={"property-page"}>
             <Stack className={"filter-config"}>
-              {/* <Filter /> */}
+              <Filter />
             </Stack>
             <Stack className={"main-config"} mb={"76px"}>
               <Stack className={"list-config"}>
-                {/* {properties.map((property, index) => {
+                {properties.map((property, index) => {
                   return <PropertyCard key={index} />;
-                })} */}
+                })}
               </Stack>
               <Stack className={"pagination-config"}>
                 <Stack className="pagination-box">
