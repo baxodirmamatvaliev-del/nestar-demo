@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NextPage } from "next";
 import { Box, Button, Pagination, Stack, Typography } from "@mui/material";
 // import PropertyCard from "../../libs/components/property/PropertyCard";
-import withLayoutBasic from "../../libs/components/layout/LayoutBasic";
+import withLayoutBasic from "../../libs/components/layout/LayoutBassic";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 // import Filter from "@/libs/components/property/Filter";
 import useDeviceDetect from "@/libs/hooks/useDeviceDetect";

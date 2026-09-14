@@ -1,4 +1,4 @@
-import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
+import withLayoutBasic from "@/libs/components/layout/LayoutBassic";
 import useDeviceDetect from "@/libs/hooks/useDeviceDetect";
 import { Stack } from "@mui/material";
 import { NextPage } from "next";
