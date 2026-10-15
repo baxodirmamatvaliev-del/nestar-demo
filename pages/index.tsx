@@ -7,11 +7,11 @@ import TrendProperties from "@/libs/components/homepage/TrendProperties";
 import withLayoutMain from "@/libs/components/layout/LayoutHome";
 import { Stack } from "@mui/material";
 import type { NextPage } from "next";
+import useDeviceDetect from "@/libs/hooks/useDeviceDetect";
+import { useQuery } from "@apollo/client";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import useDeviceDetect from "@/libs/hooks/useDeviceDetect";
-import { useQuery } from "@apollo/client";
 
 const Home: NextPage = () => {
   const device = useDeviceDetect();
